@@ -3,11 +3,13 @@ var app = express()
 var bodyParser = require('body-parser')
 var url = require('url')
 
+var { games, skills, CURRENT_YEAR } = require('./games')
+
 app.set('views', __dirname + '')
 app.engine('html', require('ejs').renderFile)
 
 app.get('/', function (req, res) {
-    res.render('./public/index.html')
+    res.render('./public/index.html', { games, skills, CURRENT_YEAR })
 })
 app.get('/css/:filename', function (req, res) {
     var filename = req.params.filename
@@ -48,5 +50,5 @@ app.get('/games/:game/Build/:arq', function (req, res) {
 
 var port = (process.env.PORT || 5000)
 app.listen(port, function () {
-  console.log('Game listening on port ' + port + '!')
+    console.log('Game listening on port ' + port + '!')
 })

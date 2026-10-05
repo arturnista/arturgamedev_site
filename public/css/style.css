@@ -1,35 +1,56 @@
 /* Native */
+:root {
+    --bg-color: #0f172a;
+    --bg-card: #1e293b;
+    --text-primary: #f8fafc;
+    --text-secondary: #94a3b8;
+    --accent-primary: #6366f1;
+    --accent-secondary: #ec4899;
+    --accent-gradient: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
+    --font-heading: 'Outfit', sans-serif;
+    --font-body: 'Inter', sans-serif;
+}
+
 html {
-    font-family: 'Open Sans', sans-serif;
+    font-family: var(--font-body);
     position: relative;
     width: 100%;
+    scroll-behavior: smooth;
 }
+
 body {
     position: relative;
     width: 100%;
     margin: 0;
     min-height: 100vh;
     display: grid;
-    grid-template-rows: 5rem 1fr 3rem;
+    grid-template-rows: 5rem 1fr auto; /* Changed last to auto for footer */
+    background-color: var(--bg-color);
+    color: var(--text-primary);
 }
+
 a {
-    color: #ccc;
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: color 0.2s;
 }
-h1 {
-    margin: 0;    
-    padding: 0;
+
+a:hover {
+    color: var(--accent-primary);
 }
-h2 {
+
+h1, h2, h3, h4 {
+    font-family: var(--font-heading);
     margin: 0;
     padding: 0;
+    color: var(--text-primary);
 }
-h3 {
-    margin: 0;
-    padding: 0;
-}
+
 p {
     margin: 0;
     padding: 0;
+    line-height: 1.6;
+    color: var(--text-secondary);
 }
 
 /* Components */
@@ -43,35 +64,40 @@ p {
 }
 
 .text-sep {
-    margin-top: .5em;
+    margin-top: 1em;
 }
 
+/* Buttons */
 .btn {
-    min-width: 200px;
+    min-width: 140px;
     margin: 0;
-    padding: .5rem 1.5rem;
-    font-size: 1.2rem;
-
-    border-radius: 1rem;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 999px; /* Pill shape */
     
-    border: 2px solid #fafafa;
-    background-color: #212121;
-    color: #fafafa;
-
-    transition: 300ms all;
+    border: none;
+    background: var(--bg-card);
+    color: var(--text-primary);
+    
+    transition: all 0.3s ease;
     cursor: pointer;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
 }
+
 .btn:hover {
-    border: 2px solid #212121;
-    background-color: #fafafa;
-    color: #212121;
+    background: var(--accent-gradient);
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(99, 102, 241, 0.3);
 }
 
 .btn p {
-    color: #FAFAFA;    
-}
-.btn:hover p {
-    color: #212121;    
+    color: inherit;
+    font-weight: 600;
 }
 
 .btn .link {
@@ -79,24 +105,47 @@ p {
     justify-content: center;
     align-items: center;
     text-decoration: none;
+    color: inherit;
+    width: 100%;
+    height: 100%;
 }
 
-.btn .link .logo {
-    margin-right: 1rem;
-}
-.btn:hover .link .logo {
-    filter: brightness(0.1);
+/* Icons in buttons need to handle color changes */
+.btn .logo {
+    height: 24px;
+    width: 24px;
+    margin-right: 0.5rem;
+    filter: grayscale(1) invert(1); /* White/Grey icons */
+    transition: filter 0.3s;
 }
 
+.btn:hover .logo {
+    filter: none; /* Original color or white depending on icon */
+    filter: brightness(0) invert(1); /* Force white on hover */
+}
+
+
+/* Team Section (Micro-component) */
 .team {
-
+    margin-top: 1rem;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 1rem;
+    border-radius: 8px;
 }
 .team h4 {
-    margin-bottom: .5rem;
-    color: #212121;
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--text-secondary);
 }
-.team .member:hover {
+.team .member p {
+    font-size: 0.9rem;
+    color: var(--text-primary);
+}
+.team .member:hover p {
     text-decoration: underline;
+    color: var(--accent-primary);
 }
 
 
@@ -104,51 +153,51 @@ p {
 header {
     display: flex;
     align-items: center;
+    justify-content: space-between; /* If we add nav later */
     
-    padding: 0 5rem;
-    background-color: #212121;
+    padding: 0 4rem;
+    background-color: rgba(15, 23, 42, 0.8); /* Glass effect base */
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    
     height: 5rem;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
-@media (max-width: 768px) 
-{
+@media (max-width: 768px) {
     header {
-        padding: 0 1rem;
+        padding: 0 1.5rem;
+        justify-content: center;
     }
 }
+
 header a {
     text-decoration: none;
 }
 header h1 {
-    color: #FAFAFA;    
-    font-size: 3em;
-    font-weight: normal;
+    font-size: 1.8rem;
+    font-weight: 700;
+    background: var(--accent-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
-header p {
-    color: #FAFAFA;    
-    text-align: center;
-}
-
 
 
 /* Content */
 content {
     min-height: 100%;
-    background-color: #3a3a3a;
+    /* Background handled by body */
 }
 
 .container {
-    margin-top: 3rem;
-}
-.container h2 {
-    font-weight: bold;
-    color: #FAFAFA; 
-    margin-bottom: 1rem;  
-}
-.container p {
-    color: #FAFAFA;    
+    margin-top: 0; /* Reset margin since grid handles it */
+    padding: 4rem 0;
 }
 
 /* Footer */
 footer {
-    background-color: #3a3a3a;
+    background-color: var(--bg-card);
+    height: 100px;
+    margin-top: 4rem;
 }
