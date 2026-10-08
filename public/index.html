@@ -1,34 +1,63 @@
 <!doctype html>
-<html lang="en-us">
+<html lang="en">
     <head>
         <meta charset="utf-8">
-        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="description" content="A collection of games created by Artur Nista.">
-        <link rel="shortcut icon" href="/img/favicon.png" />
-        <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+        <meta name="theme-color" content="#f4f5f3">
+        <script>
+            try {
+                const savedTheme = localStorage.getItem('artur-portfolio-theme');
+                if (savedTheme === 'light' || savedTheme === 'dark') {
+                    document.documentElement.dataset.theme = savedTheme;
+                }
+            } catch (error) {
+                // The system preference remains available when storage is disabled.
+            }
+        </script>
+        <link rel="icon" href="/img/favicon.png">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="/css/style.css">
         <link rel="stylesheet" href="/css/home.css">
+        <link rel="stylesheet" href="/css/modern.css">
         <title>Artur Nista — Game Developer</title>
     </head>
     <body>
+        <a class="skip-link" href="#main-content">Skip to content</a>
         <header>
-            <a href='/' class="brand"><h1>Artur Nista</h1><span>Game Developer</span></a>
+            <a href="/" class="brand" aria-label="Artur Nista, home"><span class="brand-mark" aria-hidden="true">AN</span><span class="brand-copy"><strong>Artur Nista</strong><span>Game developer</span></span></a>
             <nav class="header-nav" aria-label="Main navigation">
                 <a href="#about-heading">About</a>
                 <a href="#games-heading">Games</a>
                 <a href="#experience-heading">Experience</a>
+                <a class="nav-contact" href="#contact-heading">Get in touch <span aria-hidden="true">↗</span></a>
+                <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Switch to dark mode" aria-pressed="false">
+                    <svg class="theme-icon theme-icon-sun" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                        <circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.8"/>
+                        <path d="M12 2v2m0 16v2M4.93 4.93l1.42 1.42m11.3 11.3 1.42 1.42M2 12h2m16 0h2M4.93 19.07l1.42-1.42m11.3-11.3 1.42-1.42" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+                    </svg>
+                    <svg class="theme-icon theme-icon-moon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                        <path d="M20.2 15.4A8.5 8.5 0 0 1 8.6 3.8 8.5 8.5 0 1 0 20.2 15.4Z" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    <span class="theme-toggle-label">Dark</span>
+                </button>
             </nav>
         </header>
-        <content class="home">
+        <main id="main-content" class="home">
             <div class="container info-container">
                 <div class="profile-container">
-                    <img src="/img/profile.jpg" class="profile-image"/>
+                    <img src="/img/profile.jpg" class="profile-image" alt="Portrait of Artur Nista" width="200" height="200">
                 </div>
                 <div class="about-container">
                     <h2 id="about-heading">About</h2>
                     <p class="about-lead">I’m a passionate game developer living my childhood dream of working in the video game industry. My journey began with RPG Maker when I was 13, and today I’m a Unity Developer at Fortis.</p>
                     <p class="justify text-sep">I’m an experienced game developer skilled in Unity 3D, C#, and backend development. I’m passionate about creating captivating gameplay experiences and bring a strong background in React, Node.js, and full-stack development. My work includes a game featured in Newgrounds’ “Best of February 2022.” Fluent in Portuguese and English (C1 CEFR), I’m looking to collaborate on exciting gaming projects and cutting-edge technologies.</p>
+                    <div class="hero-actions">
+                        <a class="game-cta" href="#games-heading">Explore my games <span aria-hidden="true">↓</span></a>
+                        <a class="text-link" href="#contact-heading">Get in touch <span aria-hidden="true">↗</span></a>
+                    </div>
                 </div>
                 <div class="skills-container">
                     <h2>Skills</h2>
@@ -52,31 +81,21 @@
                     </ul>
                 </div>
                 <div class="contact-container">
-                    <h2>Contact</h2>
-                    <button class="btn">
-                        <a class="link" href="https://github.com/arturnista">
-                            <img src="/img/github-logo.png" class="logo" />
-                            <p>Github</p>
+                    <h2 id="contact-heading">Elsewhere</h2>
+                    <div class="contact-links">
+                        <a class="contact-link" href="https://github.com/arturnista" target="_blank" rel="noopener noreferrer">
+                            <img src="/img/github-logo.png" alt="" width="28" height="28" loading="lazy"><span>GitHub</span><span class="contact-arrow" aria-hidden="true">↗</span>
                         </a>
-                    </button>
-                    <button class="btn">
-                        <a class="link" href="https://www.linkedin.com/in/artur-nista">
-                            <img src="/img/linkedin-logo.png" class="logo" />
-                            <p>Linkedin</p>
+                        <a class="contact-link" href="https://www.linkedin.com/in/artur-nista" target="_blank" rel="noopener noreferrer">
+                            <img src="/img/linkedin-logo.png" alt="" width="28" height="28" loading="lazy"><span>LinkedIn</span><span class="contact-arrow" aria-hidden="true">↗</span>
                         </a>
-                    </button>
-                    <button class="btn">
-                        <a class="link" href="https://arturnista.itch.io">
-                            <img src="/img/itch-logo.svg" class="logo" />
-                            <p>Itch.io</p>
+                        <a class="contact-link" href="https://arturnista.itch.io" target="_blank" rel="noopener noreferrer">
+                            <img src="/img/itch-logo.svg" alt="" width="28" height="28" loading="lazy"><span>itch.io</span><span class="contact-arrow" aria-hidden="true">↗</span>
                         </a>
-                    </button>
-                    <button class="btn">
-                        <a class="link" href="https://armorgames.com/user/arturnista">
-                            <img src="/img/armor-logo.png" class="logo" />
-                            <p>Armor Games</p>
+                        <a class="contact-link" href="https://armorgames.com/user/arturnista" target="_blank" rel="noopener noreferrer">
+                            <img src="/img/armor-logo.png" alt="" width="28" height="28" loading="lazy"><span>Armor Games</span><span class="contact-arrow" aria-hidden="true">↗</span>
                         </a>
-                    </button>
+                    </div>
                 </div>
             </div>
             <section class="container games-list-container" aria-labelledby="games-heading">
@@ -223,9 +242,71 @@
                     </article>
                 </div>
             </section>
-        </content>
-        <footer>
-            
-        </footer>
+        </main>
+        <footer class="site-footer"><p>Designed and built by Artur Nista</p><a href="#main-content">Back to top ↑</a></footer>
+        <script>
+            (function () {
+                const storageKey = 'artur-portfolio-theme';
+                const root = document.documentElement;
+                const toggle = document.getElementById('theme-toggle');
+                const themeColor = document.querySelector('meta[name="theme-color"]');
+                const systemPreference = window.matchMedia('(prefers-color-scheme: dark)');
+
+                function getSavedTheme() {
+                    try {
+                        const value = window.localStorage.getItem(storageKey);
+                        return value === 'light' || value === 'dark' ? value : null;
+                    } catch (error) {
+                        return null;
+                    }
+                }
+
+                function applyTheme(theme) {
+                    const isDark = theme === 'dark';
+                    root.dataset.theme = isDark ? 'dark' : 'light';
+
+                    if (themeColor) {
+                        themeColor.setAttribute('content', isDark ? '#12191b' : '#f4f5f3');
+                    }
+
+                    if (toggle) {
+                        const nextTheme = isDark ? 'light' : 'dark';
+                        toggle.setAttribute('aria-label', `Switch to ${nextTheme} mode`);
+                        toggle.setAttribute('aria-pressed', String(isDark));
+                        toggle.title = `Switch to ${nextTheme} mode`;
+                        toggle.querySelector('.theme-toggle-label').textContent = isDark ? 'Light' : 'Dark';
+                    }
+                }
+
+                function getCurrentTheme() {
+                    return getSavedTheme() || (systemPreference.matches ? 'dark' : 'light');
+                }
+
+                applyTheme(getCurrentTheme());
+
+                toggle.addEventListener('click', function () {
+                    const nextTheme = root.dataset.theme === 'dark' ? 'light' : 'dark';
+                    applyTheme(nextTheme);
+
+                    try {
+                        window.localStorage.setItem(storageKey, nextTheme);
+                    } catch (error) {
+                        // Keep the selected theme for this visit if storage is unavailable.
+                    }
+                });
+
+                systemPreference.addEventListener('change', function (event) {
+                    if (!getSavedTheme()) {
+                        applyTheme(event.matches ? 'dark' : 'light');
+                    }
+                });
+
+                window.addEventListener('storage', function (event) {
+                    if (event.key === storageKey || event.key === null) {
+                        applyTheme(getCurrentTheme());
+                    }
+                });
+            }());
+        </script>
     </body>
 </html>

@@ -1,20 +1,24 @@
-# Artur Game Dev
+# Artur Nista — Game Developer
 
-Portfolio of games from Artur Nista (me!)
+Portfolio of games and professional work by Artur Nista.
 
 You can check it online at  
 https://arturgamedev.com
 
-## To run
-Instalar os pacotes  
-```$ npm install```
+## Run locally
 
-Rodar o Node.JS  
-```$ npm install```
+Install the dependencies and start the local server:
+
+```sh
+npm install
+npm start
+```
+
+The site is served at `http://localhost:5000` by default.
 
 ## Games
 
-**Mage arena**  
+**Mage Arena**  
 _browser_  
 https://magearena.com/
 
