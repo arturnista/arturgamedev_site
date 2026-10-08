@@ -1,8 +1,10 @@
 /* Native */
 html {
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Roboto', 'Open Sans', sans-serif;
     position: relative;
     width: 100%;
+    scroll-behavior: smooth;
+    background: #3a3a3a;
 }
 body {
     position: relative;
@@ -14,6 +16,7 @@ body {
 }
 a {
     color: #ccc;
+    text-underline-offset: .2em;
 }
 h1 {
     margin: 0;    
@@ -39,7 +42,7 @@ p {
 }
 
 .justify {
-    text-align: justify;
+    text-align: left;
 }
 
 .text-sep {
@@ -104,24 +107,81 @@ p {
 header {
     display: flex;
     align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: .5rem 1.5rem;
     
-    padding: 0 5rem;
+    padding: 0 clamp(1rem, 5vw, 5rem);
     background-color: #212121;
-    height: 5rem;
+    min-height: 5rem;
+    box-sizing: border-box;
+    border-bottom: 1px solid rgba(255, 255, 255, .08);
 }
 @media (max-width: 768px) 
 {
     header {
         padding: 0 1rem;
     }
+
+    header .brand {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 0;
+        padding: .65rem 0;
+    }
+
+    header .brand span {
+        font-size: .8rem;
+    }
+
+    header .header-nav {
+        width: 100%;
+        gap: 1.25rem;
+        padding-bottom: .25rem;
+    }
 }
 header a {
     text-decoration: none;
 }
+header .brand {
+    display: flex;
+    align-items: baseline;
+    gap: 1rem;
+}
 header h1 {
     color: #FAFAFA;    
-    font-size: 3em;
+    font-size: clamp(1.65rem, 4vw, 2.5rem);
     font-weight: normal;
+    letter-spacing: -.035em;
+}
+header .brand span {
+    color: #d4d4d4;
+    font-size: .95rem;
+}
+header .header-nav {
+    display: flex;
+    align-items: center;
+    gap: clamp(.75rem, 2vw, 1.5rem);
+}
+header .header-nav a {
+    color: #e6e6e6;
+    font-size: .95rem;
+    font-weight: 600;
+    text-decoration: none;
+    text-underline-offset: .25em;
+}
+header .header-nav a:hover {
+    color: #fff;
+    text-decoration: underline;
+}
+@media (max-width: 380px) {
+    header .header-nav {
+        gap: .9rem;
+    }
+
+    header .header-nav a {
+        font-size: .88rem;
+    }
 }
 header p {
     color: #FAFAFA;    
@@ -134,6 +194,11 @@ header p {
 content {
     min-height: 100%;
     background-color: #3a3a3a;
+}
+
+:focus-visible {
+    outline: 3px solid #f1c75b;
+    outline-offset: 4px;
 }
 
 .container {

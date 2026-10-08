@@ -3,15 +3,22 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="A collection of games created by Artur Nista.">
         <link rel="shortcut icon" href="/img/favicon.png" />
         <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="/css/style.css">
         <link rel="stylesheet" href="/css/home.css">
-        <title>Artur Nista Games</title>
+        <title>Artur Nista — Game Developer</title>
     </head>
     <body>
         <header>
-            <a href='/'><h1>Artur Nista Games</h1></a>
+            <a href='/' class="brand"><h1>Artur Nista</h1><span>Game Developer</span></a>
+            <nav class="header-nav" aria-label="Main navigation">
+                <a href="#about-heading">About</a>
+                <a href="#games-heading">Games</a>
+                <a href="#experience-heading">Experience</a>
+            </nav>
         </header>
         <content class="home">
             <div class="container info-container">
@@ -19,47 +26,30 @@
                     <img src="/img/profile.jpg" class="profile-image"/>
                 </div>
                 <div class="about-container">
-                    <h2>About</h2>
-                    <p class="justify">My name is Artur Morelle Nista and these are my game collection.</p>
-                    <p class="justify text-sep">This portfolio contains my best and/or most interesting productions.</p>
-                    <p class="justify">Here you can see my knowledge and improvement of my game developer skills in the last years.</p>
-                    <p class="justify">I've been in the TI area for the past 5 years, working as a software developer.</p>
-                    <p class="justify">In my current job, I'm a Web Developer, working mainly with Node.JS and PHP for the Backend, React for the Frontend and React-Native for mobile development.</p>
-                    <p class="justify text-sep">My journey as a game developer started developing maps and mods for Warcraft 3 and simple games using RPG Maker.</p>
-                    <p class="justify">Right now, I have over 5 years of game development experience, mainly using Unity 3D, but with some projects built in HTML, Game Maker, C++ with OpenGL and others.</p>
-                    <p class="justify"><small>Fun fact, me and my friend developed a TD Map for warcraft 3 over 10 years ago that has more than 1.300 downloads: <i><a href="https://www.epicwar.com/maps/62021/">Magma TD</a></i></small>.</p>
+                    <h2 id="about-heading">About</h2>
+                    <p class="about-lead">I’m a passionate game developer living my childhood dream of working in the video game industry. My journey began with RPG Maker when I was 13, and today I’m a Unity Developer at Fortis.</p>
+                    <p class="justify text-sep">I’m an experienced game developer skilled in Unity 3D, C#, and backend development. I’m passionate about creating captivating gameplay experiences and bring a strong background in React, Node.js, and full-stack development. My work includes a game featured in Newgrounds’ “Best of February 2022.” Fluent in Portuguese and English (C1 CEFR), I’m looking to collaborate on exciting gaming projects and cutting-edge technologies.</p>
                 </div>
                 <div class="skills-container">
-                    <h2>Languages</h2>
-                    <div class="item">
-                        <img src="/img/unity-logo.png"/>
-                        <h3>Unity 3D</h3>
-                        <p>5 years</p>
-                    </div>
-                    <div class="item">
-                        <img src="/img/csharp-logo.png"/>
-                        <h3>C#</h3>
-                        <p>5 years</p>
-                    </div>
-                    <div class="item">
-                        <img src="/img/js-logo.png"/>
-                        <h3>Javascript</h3>
-                        <p>6 years</p>
-                    </div>
-                    <div class="item">
-                        <img src="/img/htmlcss-logo.png"/>
-                        <h3>HTML / CSS</h3>
-                        <p>4 years</p>
-                    </div>
-                    <div class="item">
-                        <img src="/img/php-logo.png"/>
-                        <h3>PHP</h3>
-                        <p>3 years</p>
-                    </div>
-                    <!-- <h2>Skills</h2>
-                    <p>Testing (TDD)</p>
-                    <p>Git</p>
-                    <p>Agile Methodologies</p> -->
+                    <h2>Skills</h2>
+                    <h3 class="skills-group-heading">Core Skills</h3>
+                    <ul class="skills-list">
+                        <li>Unity 3D</li>
+                        <li>C#</li>
+                        <li>Gameplay programming</li>
+                        <li>UI programming</li>
+                        <li>Tooling</li>
+                    </ul>
+                    <h3 class="skills-group-heading">Additional Skills</h3>
+                    <ul class="skills-list">
+                        <li>JavaScript</li>
+                        <li>Node.js / backend development</li>
+                        <li>React / React Native</li>
+                        <li>Full-stack development</li>
+                        <li>HTML / CSS</li>
+                        <li>Multiplayer systems / Socket.IO</li>
+                        <li>Git / automated testing</li>
+                    </ul>
                 </div>
                 <div class="contact-container">
                     <h2>Contact</h2>
@@ -89,179 +79,150 @@
                     </button>
                 </div>
             </div>
-            <div class="container games-list-container">
-                <h2>Games</h2>
-
-                <div class="game-item">
-                    <a href="/games/color"><h3>Lady of the Colors</h3></a>
-                    <p class="justify">Platform with puzzles. You can fly to avoid obstacles and get close to your objective.</p>
-                    <p class="justify">Game developed in Unity 3D, with more focus on game and level design.</p>
-                    <p class="justify text-sep">This game is heavily inspired by Celeste, as my intentions were to create a platform with a little set of player mechanics, that could be changed and developed using interesting level design.</p>
-                    <p class="justify">The development follows a composition strategy, as every components is self-contained, working independent of others.</p>
-                    <p class="justify">For example, in the game you can fly. This action consume fly fuel, that can be refilled collecting some special objects, like refill orbs and save points. Every object that refills your fly fuel, has the same component, that the only purpose is to refill your fuel.</p>
-                    <p class="justify text-sep">This design helps a lot with building new features and mechanics, because you can create fun interactions only plugging together small features.</p>
-                    <div class="game-image">
-                        <img src="/img/lady/SS_20200703001848.png"/>
-                        <img src="/img/lady/SS_20200703001938.png"/>
-                        <img src="/img/lady/SS_20200703002049.png"/>
-                        <img src="/img/lady/SS_20200703002149.png"/>
-                        <img src="/img/lady/SS_20200703002154.png"/>
-                        <img src="/img/lady/SS_20200703002214.png"/>
-                        <img src="/img/lady/SS_20200703002234.png"/>
-                        <img src="/img/lady/SS_20200703002532.png"/>
-                        <img src="/img/lady/SS_20200703002552.png"/>
-                        <img src="/img/lady/SS_20200703002636.png"/>
-                        <img src="/img/lady/SS_20200703002719.png"/>
-                        <a href="/games/color" class="game-link">
-                            <div class="overlay"><p>Press here to play</p></div>
-                        </a>
-                    </div>
+            <section class="container games-list-container" aria-labelledby="games-heading">
+                <div class="games-heading">
+                    <h2 id="games-heading">Games</h2>
                 </div>
 
-                <div class="game-item">
-                    <a href="http://armor.ag/ColorlessRuins"><h3>Colorless Ruins</h3></a>
-                    <p class="justify">In Colorless Ruins you move around a forgotten realm, avoiding enemies, collecting keys and trying to find a way back home.</p>
-                    <p class="justify">Game developed in Unity 3D, for Arcade Jam 2.</p>
-                    <p class="justify text-sep">The game is short and have a simple ideia of a very popular genre on mobile. The twist of moving freely comes from initial development stage, where I found that changing directions between movement was fun.</p>
-                    <p class="justify">My objective with developing this game was make something small, but very polished. Being an arcade game, I also added some secrets and challenges.</p>
-                    <p class="justify text-sep">A Games Wizard at Armor Games liked my game and invited me to upload the game to Armor Games.</p>
-                    <p class="justify">Right now, it has more than <strong>20.000 plays</strong> and an <strong>78 score</strong>, which, in my opinion, is pretty good.</p>
-                    <div class="game-image color">
-                        <img src="/img/colorless/SS_20200503124130.png" />
-                        <img src="/img/colorless/SS_20200503124135.png" />
-                        <img src="/img/colorless/SS_20200503124140.png" />
-                        <img src="/img/colorless/SS_20200503124155.png" />
-                        <img src="/img/colorless/SS_20200503124205.png" />
-                        <img src="/img/colorless/SS_20200503124220.png" />
-                        <img src="/img/colorless/SS_20200503124250.png" />
-                        <img src="/img/colorless/SS_20200503124330.png" />
-                        <img src="/img/colorless/SS_20200503124420.png" />
-                        <img src="/img/colorless/SS_20200503124440.png" />
-                        <img src="/img/colorless/SS_20200503124445.png" />
-                        <img src="/img/colorless/SS_20200503124515.png" />
-                        <img src="/img/colorless/SS_20200503124530.png" />
-                        <a href="http://armor.ag/ColorlessRuins" class="game-link">
-                            <div class="overlay"><p>Press here to play</p></div>
-                        </a>
+                <article class="game-item" id="lady-of-colors">
+                    <div class="game-copy">
+                        <h3><a href="https://arturnista.itch.io/lady-of-colors" target="_blank" rel="noopener">Lady of Colors</a></h3>
+                        <p>A challenging platformer. Play as a Knight from the Color Kingdom, sent to rescue the Lady of Colors from the Underground Kingdom. Use Color Fly to avoid obstacles, solve puzzles, and progress through the levels.</p>
+                        <p class="game-note">This version is a demo and does not represent the final version of the game.</p>
+                        <p class="controls"><strong>Controls</strong> Arrow Keys / WASD: Move · C / Space: Jump · X / Shift: Fly · Z / E: Use</p>
+                        <a class="game-cta" href="https://arturnista.itch.io/lady-of-colors" target="_blank" rel="noopener">Play on itch.io <span aria-hidden="true">↗</span></a>
                     </div>
+                    <div class="game-media">
+                        <div class="game-gallery" aria-label="Lady of Colors screenshots">
+                            <img src="/img/lady/SS_20200703001848.png" alt="Knight exploring the underground kingdom in Lady of Colors" loading="lazy">
+                            <img src="/img/lady/SS_20200703001938.png" alt="A platforming challenge in Lady of Colors" loading="lazy">
+                            <img src="/img/lady/SS_20200703002049.png" alt="Colorful underground scenery" loading="lazy">
+                        </div>
+                        <iframe class="itch-embed" src="https://itch.io/embed/454175" title="Lady of Colors on itch.io" loading="lazy" allowfullscreen></iframe>
+                    </div>
+                </article>
+
+                <article class="game-item" id="treasure-hunter">
+                    <div class="game-copy">
+                        <h3><a href="https://arturnista.itch.io/treasure-hunter" target="_blank" rel="noopener">Treasure Hunter</a></h3>
+                        <p>Explore an old castle full of forgotten treasures and try to be the first to claim them. Stay curious to uncover secret entrances, holes, and chests.</p>
+                        <p>Use your hookshot to explore the castle and grab items. The hookshot may have other uses, too—and you might even make some friends along the way.</p>
+                        <p class="controls"><strong>Discover</strong> Hunt for treasure · Find hidden secrets · Make some friends</p>
+                        <a class="game-cta" href="https://arturnista.itch.io/treasure-hunter" target="_blank" rel="noopener">Play on itch.io <span aria-hidden="true">↗</span></a>
+                    </div>
+                    <div class="game-media">
+                        <div class="game-gallery" aria-label="Treasure Hunter screenshots">
+                            <img src="/img/treasure/SS_20221031112446.png" alt="Exploring the castle in Treasure Hunter" loading="lazy">
+                            <img src="/img/treasure/SS_20221031112732.png" alt="Using the hookshot in Treasure Hunter" loading="lazy">
+                            <img src="/img/treasure/SS_20221031112856.png" alt="Another hidden area in Treasure Hunter" loading="lazy">
+                        </div>
+                        <iframe class="itch-embed" src="https://itch.io/embed/1123020" title="Treasure Hunter on itch.io" loading="lazy" allowfullscreen></iframe>
+                    </div>
+                </article>
+
+                <article class="game-item" id="time-dungeon">
+                    <div class="game-copy">
+                        <h3><a href="https://www.newgrounds.com/portal/view/834048" target="_blank" rel="noopener">Time Dungeon</a></h3>
+                        <p>You wake in a mysterious dungeon and must find a way out. Every action consumes actions; when they run out, your health starts to fall. Run out of health and you die.</p>
+                        <p>Find items, fight enemies, grow stronger, and escape the dungeon.</p>
+                        <p class="game-note">Selected as one of Newgrounds’ <a href="https://www.newgrounds.com/bbs/topic/1496106" target="_blank" rel="noopener">Top 10 Best Games of February 2022</a>.</p>
+                        <p class="controls"><strong>Controls</strong> WASD: Move · E: Pick up equipment and items · Space: Use your item</p>
+                        <a class="game-cta" href="https://www.newgrounds.com/portal/view/834048" target="_blank" rel="noopener">Play on Newgrounds <span aria-hidden="true">↗</span></a>
+                    </div>
+                    <div class="game-media">
+                        <div class="game-gallery" aria-label="Time Dungeon screenshots">
+                            <img src="/img/timedungeon/SS0_20220221114338.png" alt="A dungeon room in Time Dungeon" loading="lazy">
+                            <img src="/img/timedungeon/SS_20220221113750.png" alt="Exploring the dungeon in Time Dungeon" loading="lazy">
+                            <img src="/img/timedungeon/SS_20221127191726.png" alt="A late-game scene from Time Dungeon" loading="lazy">
+                        </div>
+                    </div>
+                </article>
+
+                <article class="game-item" id="colorless-ruins">
+                    <div class="game-copy">
+                        <h3><a href="https://armorgames.com/colorless-ruins-game/18966" target="_blank" rel="noopener">Colorless Ruins</a></h3>
+                        <p>Find your way back to the Color Kingdom from a colorless ruin. Survive each room, avoid enemies and machine guns, collect the key, and escape through the door.</p>
+                        <p>The lifeless ruins hold secrets, too: collect fruit and explore carefully to find hidden gems.</p>
+                        <p class="controls"><strong>Controls</strong> WASD / Arrow Keys: Move · Esc: Pause</p>
+                        <a class="game-cta" href="https://armorgames.com/colorless-ruins-game/18966" target="_blank" rel="noopener">Play on Armor Games <span aria-hidden="true">↗</span></a>
+                    </div>
+                    <div class="game-media">
+                        <div class="game-gallery" aria-label="Colorless Ruins screenshots">
+                            <img src="/img/colorless/SS_20200503124130.png" alt="A room in the colorless ruins" loading="lazy">
+                            <img src="/img/colorless/SS_20200503124220.png" alt="A machine gun challenge in Colorless Ruins" loading="lazy">
+                            <img src="/img/colorless/SS_20200503124530.png" alt="A hidden area in Colorless Ruins" loading="lazy">
+                        </div>
+                    </div>
+                </article>
+
+                <article class="game-item itch-library" id="itch-library">
+                    <div class="game-copy">
+                        <h3><a href="https://arturnista.itch.io/" target="_blank" rel="noopener">More games on itch.io</a></h3>
+                        <p>I like to publish my games on itch.io, where I’ve built a library of around 20 games. Explore the collection to find more experiments and projects.</p>
+                        <a class="game-cta" href="https://arturnista.itch.io/" target="_blank" rel="noopener">Explore my itch.io library <span aria-hidden="true">↗</span></a>
+                    </div>
+                    <div class="game-media itch-library-art" aria-hidden="true">
+                        <img src="/img/itch-logo.svg" alt="" loading="lazy">
+                    </div>
+                </article>
+            </section>
+            <section class="experience-container" aria-labelledby="experience-heading">
+                <div class="experience-inner">
+                    <h2 id="experience-heading">Professional Experience</h2>
+
+                    <article class="experience-item">
+                        <div class="experience-heading">
+                            <h3>Unreleased Real-Time Multiplayer Game</h3>
+                            <p class="experience-meta"><span>Fortis Games</span><span>2023–2026</span></p>
+                        </div>
+                        <div class="experience-details">
+                            <p class="experience-role">Primary UI Developer</p>
+                            <p>Implemented and maintained UI systems, screens, and widgets, including communication between UI, gameplay, and backend systems.</p>
+                            <p>Created tools for designers and artists to work with game data and build levels.</p>
+                            <p class="experience-role">Gameplay Developer</p>
+                            <p>Partnered closely with game designers on gameplay systems, creating nodes for a visual scripting system so they could build and iterate on gameplay.</p>
+                            <p>Optimized code, implemented new gameplay systems, and helped designers set up and integrate AI into their workflows.</p>
+                        </div>
+                    </article>
+
+                    <article class="experience-item">
+                        <div class="experience-heading">
+                            <h3><a href="https://www.youtube.com/watch?v=d2Sd3o_jpDY" target="_blank" rel="noopener">Rapala Fishing World Tour</a></h3>
+                            <p class="experience-meta"><span>Oktagon</span><span>2022–2023</span></p>
+                        </div>
+                        <div class="experience-details">
+                            <p class="experience-role">Prototype Developer</p>
+                            <p>Rapidly developed and iterated on numerous gameplay ideas and mini-prototypes for client review, proposing and implementing systems in a one-day cycle. Used ScriptableObjects to enable reliable communication between entities and systems.</p>
+                            <p class="experience-role">UI &amp; Metagame Developer</p>
+                            <p>Built non-gameplay systems including items, inventory, and Battle Pass, and worked on communication between the frontend and backend.</p>
+                            <p class="experience-role">Backend Developer</p>
+                            <p>Built backend systems on Beamable for inventory, friends, profiles, progression, A/B testing, and analytics.</p>
+                        </div>
+                    </article>
+
+                    <article class="experience-item">
+                        <div class="experience-heading">
+                            <h3><a href="https://store.steampowered.com/app/1702320/PIGGY_Hunt/" target="_blank" rel="noopener">PIGGY: Hunt</a></h3>
+                            <p class="experience-meta"><span>Oktagon</span><span>2022</span></p>
+                        </div>
+                        <div class="experience-details">
+                            <p class="experience-role">Gameplay Developer</p>
+                            <p>Worked on gameplay systems, implemented entities and traps, and fixed bugs related to network desynchronization.</p>
+                        </div>
+                    </article>
+
+                    <article class="experience-item">
+                        <div class="experience-heading">
+                            <h3><a href="https://www.youtube.com/watch?v=4jPGKQSRzjc" target="_blank" rel="noopener">Age of Rivals: Conquest</a></h3>
+                            <p class="experience-meta"><span>Oktagon</span><span>2021</span></p>
+                        </div>
+                        <div class="experience-details">
+                            <p class="experience-role">Metagame Developer</p>
+                            <p>Created the friends system and implemented the feature that lets friends challenge one another.</p>
+                        </div>
+                    </article>
                 </div>
-                
-                <div class="game-item">
-                    <a href="https://beta-magearena.herokuapp.com/"><h3>Mage Arena</h3></a>
-                    <p class="justify">Online Battle Arena with a Smash Bros like mechanic, where your objective is to throw your enemies out of the arena using spells.</p>
-                    <p class="justify">The Backend of the game was built using Node.js and socket.io for the client-server communication. The Frontend was built using React and PIXI.js as the rendering engine. The art was also done by me.</p>
-                    <p class="justify text-sep">My mainly motivation for creating this game was learn to build a multiplayer game. The server was my focus, as I come from a web background. I wanted to create an engine that could be easy to develop new features and have multiple games running at the same time.</p>
-                    <p class="justify">I used a Component System, like Unity3D uses. Each entity could have multiple components, like being an Physics entity, having an AI (like a bot), having buffs and debuffs, and any other component.</p>
-                    <p class="justify">In the first version of the server architecture the same Node process handled multiple game servers. This was a problem because os some reasons:</p>
-                    <p class="justify">Node being single thread, multiple games can be a problem for the engine. This could become very heavy on the machine because multiple connections would be open in the same process. And, as an indie game, it has some bugs. Sometimes the server crash and all games go down.</p>
-                    <p class="justify text-sep">Then I updated the server to be handled by multiple process. Each game is a different process created by the main server and can handles themself.</p>
-                    <p class="justify">Today all games run in the same machine, budgets reasons, but, they can run in multiples servers. That way, the problem of multiple connections in the same machine would be solved. And, if a game crashing bug happens, only that game would go down, not messing up with other servers.</p>
-                    <p class="justify">I've also came up with the challenge of developing my own physics engine. Since it's a top-down game, I could use a collision handler to manage most of the events, not needing any fancy implementation.</p>
-                    <div class="game-image nw">
-                        <img src="/img/magearena/Screenshot_0.png" />
-                        <img src="/img/magearena/Screenshot_5.png" />
-                        <img src="/img/magearena/Screenshot_2.png" />
-                        <img src="/img/magearena/Screenshot_3.png" />
-                        <img src="/img/magearena/Screenshot_4.png" />
-                        <img src="/img/magearena/Screenshot_6.png" />
-                        <img src="/img/magearena/Screenshot_1.png" />
-                        <img src="/img/magearena/Screenshot_7.png" />
-                        <img src="/img/magearena/Screenshot_8.png" />
-                        <img src="/img/magearena/Screenshot_9.png" />
-                        <img src="/img/magearena/Screenshot_0.png" />
-                        <img src="/img/magearena/Screenshot_5.png" />
-                        <img src="/img/magearena/Screenshot_2.png" />
-                        <img src="/img/magearena/Screenshot_3.png" />
-                        <img src="/img/magearena/Screenshot_4.png" />
-                        <img src="/img/magearena/Screenshot_6.png" />
-                        <img src="/img/magearena/Screenshot_1.png" />
-                        <img src="/img/magearena/Screenshot_7.png" />
-                        <a href="https://beta-magearena.herokuapp.com/" class="game-link">
-                            <div class="overlay"><p>Press here to play</p></div>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="game-item">
-                    <a href="https://play.google.com/store/apps/details?id=com.ttgames.cjumper"><h3>C Jumper</h3></a>
-                    <p class="justify">Casual infinite runner, where you jump and dash to avoid obstacles and collect diamonds, unlocking new scenarios.</p>
-                    <p class="justify">Pretty casual game made in a couple of weeks. Made in my vacation time, as a challenge to develop and release a full game.</p>
-                    <p class="justify">The main loop is pretty fun and entertaining, just have to work on the "game feel" and "juiceness" of the game.</p>
-                    <p class="justify">In this project I approached an Event Driven System, where every action (Player Jump, Player Dash, Player Gain Point, Player Die) would dispatch an event and other entities or objects would react to that.</p>
-                    <p class="justify text-sep">Sounds are played on events, UI elements are shown and hidden based on dispatched events, etc.</p>
-                    <p class="justify">So, when I need to create new features, I just need to listen to the events and react to them.</p>
-                    <p class="justify">For example, was very easy to develop achievements, because they just react to events.</p>
-                    <div class="game-image cjumper">
-                        <img src="/img/jumper/Screenshot_20200402-182923.png" />
-                        <img src="/img/jumper/Screenshot_20200402-183010.png" />
-                        <img src="/img/jumper/Screenshot_20200402-183017.png" />
-                        <img src="/img/jumper/Screenshot_20200402-183031.png" />
-                        <img src="/img/jumper/Screenshot_20200402-183046.png" />
-                        <img src="/img/jumper/Screenshot_20200402-183111.png" />
-                        <img src="/img/jumper/Screenshot_20200402-183218.png" />
-                        <img src="/img/jumper/Screenshot_20200402-183309.png" />
-                        <img src="/img/jumper/Screenshot_20200402-183346.png" />
-                        <img src="/img/jumper/Screenshot_20200402-183445.png" />
-                        <img src="/img/jumper/Screenshot_20200402-183458.png" />
-                        <a href="https://play.google.com/store/apps/details?id=com.ttgames.cjumper" class="game-link">
-                            <div class="overlay"><p>Press here to play</p></div>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="game-item">
-                    <a href="https://play.google.com/store/apps/details?id=com.tutugames.chaindestruct"><h3>Destruction chain</h3></a>
-                    <p class="justify">Casual top-down spaceship shooting game, where every hit causes a chain reaction, creating more projectiles every time you kill an enemy.</p>
-                    <p class="justify">This was my first released game. I was encouraged by some coworkers to publish for mobile after I showed them the PC version.</p>
-                    <p class="justify">I developed the initial idea and starting testing some input schemas. My first thought was that pressing where you want to shoot was too easy</p>
-                    <p class="justify text-sep">After showing to some people, the natural reaction from everyone was to click where you want to shoot.</p>
-                    <p class="justify">After that, I became adding goals, enemy powers and other minnor tweaks.</p>
-                    <p class="justify">The sound is missing, but I'm aiming at adding basic music and SFX soon.</p>
-                    <div class="game-image destruct">
-                        <a href="https://play.google.com/store/apps/details?id=com.tutugames.chaindestruct" class="game-link">
-                            <div class="overlay"><p>Press here to play</p></div>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="game-item">
-                    <a href="/games/fps"><h3>Retro FPS</h3></a>
-                    <p class="justify">A futuristic FPS short game, with some expiration on retro FPS games (fast movement and no gun limit).</p>
-                    <p class="justify">One of my first 3D games and my first linear game, with a simple plot.</p>
-                    <p class="justify">All assets are from Asset Store, besides some very simple stuff, like the Flying Demon and the glass walls.</p>
-                    <p class="justify text-sep">I learned to create animations in 3D (all guns animations are done by me). Developed some basic AI for the enemies and coded all the player movement and mechanics.</p>
-                    <p class="justify">The core gameplay is heavy based on retro FPS, like Half-Life and DOOM. The mechanics, like the fast movement, are complemented with the enemies.</p>
-                    <p class="justify text-sep">Enemies was designed to keep the player in movement. The cyclop follow you around and the flying demon attack your position with projectiles.</p>
-                    <p class="justify">I also try to vary the battle strategies changing the level design. Corredors and small rooms are opposed with big and open areas, chaning the player style of fighting the enemies.</p>
-                    <div class="game-image fps">
-                        <a href="/games/fps" class="game-link">
-                            <div class="overlay"><p>Press here to play</p></div>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="game-item">
-                    <a href="/games/webthreshgame"><h3>Web Thresh Game</h3></a>
-                    <p class="justify">Simple game that your objective is to collect souls for Thresh. You can upgrade your hook with this souls.</p>
-                    <p class="justify">Developed in a single weekend, with a small set of modifications done after that.</p>
-                    <p class="justify">This game was done with a team of four, with the aim to improve our code skills, in a kind of self made Gamejam.</p>
-                    <p class="justify">My first game developed in a group of people, which improved my communication, decision making and coding skill overall.</p>
-
-                    <div class="team">
-                        <h4>Team members</h4>
-                        <a href="https://github.com/machadogab" class="member"><p class="justify">Gabriel Machado</p></a>
-                        <a href="https://github.com/moharu" class="member"><p class="justify">João Teló</p></a>
-                        <a href="https://www.linkedin.com/in/matheus-pereira-232544144" class="member"><p class="justify">Matheus Pereira</p></a>
-                    </div>
-
-                    <div class="game-image webthreshgame">
-                        <a href="/games/webthreshgame" class="game-link">
-                            <div class="overlay"><p>Press here to play</p></div>
-                        </a>
-                    </div>
-                </div>
-
-            </div>
+            </section>
         </content>
         <footer>
             
