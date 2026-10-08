@@ -341,16 +341,6 @@
     scroll-snap-align: start;
 }
 
-.itch-embed {
-    display: block;
-    width: 100%;
-    max-width: 552px;
-    height: 167px;
-    margin-top: 1rem;
-    border: 0;
-    border-radius: .35rem;
-}
-
 .dungeon-art {
     min-height: 240px;
     display: grid;

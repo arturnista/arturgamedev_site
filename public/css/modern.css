@@ -211,9 +211,11 @@ header .header-nav .nav-contact:hover { background: var(--action-hover); color: 
 .game-copy .game-note a { color: var(--accent-dark); }
 .game-copy .controls { padding: .9rem 1rem; border: 1px solid var(--line); border-radius: 10px; background: var(--controls-surface); color: var(--ink-soft); }
 .controls strong { color: var(--ink); }
+.game-copy .controls .control { display: flex; flex-wrap: wrap; align-items: center; gap: .3rem; margin: .35rem 0 .1rem; }
+.game-copy .controls kbd { min-width: 1.65rem; padding: .15rem .4rem; border: 1px solid var(--line); border-bottom-width: 2px; border-radius: 5px; background: var(--surface); color: var(--ink); font-family: inherit; font-size: .8rem; font-weight: 600; line-height: 1.4; text-align: center; }
+.game-copy .controls .control span { margin-left: .15rem; }
 .game-gallery { gap: .65rem; padding: 0 0 .7rem; scrollbar-color: var(--gallery-thumb) var(--gallery-track); }
 .game-gallery img { width: min(84%, 420px); border-radius: 10px; background: #e8ece9; }
-.itch-embed { border-radius: 10px; background: var(--paper); }
 .itch-library-art { min-height: 230px; border-radius: 12px; background: #f05b5c; }
 .itch-library-art img { width: 92px; height: 92px; }
 
