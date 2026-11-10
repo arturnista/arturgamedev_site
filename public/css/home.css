@@ -184,6 +184,52 @@
     text-decoration-thickness: 2px;
 }
 
+.experience-games {
+    display: grid;
+    gap: 1.25rem;
+    margin: 0;
+    padding: 0 0 0 1.25rem;
+    list-style: disc;
+}
+
+.experience-games li::marker {
+    color: #53636c;
+}
+
+.experience-game {
+    display: grid;
+    grid-template-columns: minmax(180px, .65fr) minmax(0, 1.35fr);
+    gap: clamp(1rem, 3vw, 2rem);
+    padding-bottom: 1.25rem;
+    border-bottom: 1px solid #d5dde1;
+}
+
+.experience-game:last-child {
+    padding-bottom: 0;
+    border-bottom: 0;
+}
+
+.experience-game h4 {
+    margin: 0 0 .35rem;
+    color: #212121;
+    font-size: 1.05rem;
+    line-height: 1.4;
+}
+
+.experience-game h4 a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.experience-game h4 a:hover {
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+}
+
+.experience-game .experience-meta {
+    margin: 0;
+}
+
 .experience-meta {
     display: flex;
     flex-wrap: wrap;
@@ -392,6 +438,11 @@
     .experience-item {
         grid-template-columns: 1fr;
         gap: .75rem;
+    }
+
+    .experience-game {
+        grid-template-columns: 1fr;
+        gap: .5rem;
     }
 
     .game-item {

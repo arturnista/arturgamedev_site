@@ -30,8 +30,8 @@
             <a href="/" class="brand" aria-label="Artur Nista, home"><span class="brand-copy"><strong>Artur Nista</strong><span>Game developer</span></span></a>
             <nav class="header-nav" aria-label="Main navigation">
                 <a href="#about-heading">About</a>
-                <a href="#games-heading">Games</a>
                 <a href="#experience-heading">Experience</a>
+                <a href="#games-heading">Games</a>
                 <a class="nav-contact" href="#contact-heading">Get in touch <span aria-hidden="true">↗</span></a>
                 <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Switch to dark mode" aria-pressed="false">
                     <svg class="theme-icon theme-icon-sun" viewBox="0 0 24 24" fill="none" aria-hidden="true">
@@ -98,6 +98,91 @@
                     </div>
                 </div>
             </div>
+            <section class="experience-container" aria-labelledby="experience-heading">
+                <div class="experience-inner">
+                    <h2 id="experience-heading">Professional Experience</h2>
+
+                    <article class="experience-item">
+                        <div class="experience-heading">
+                            <h3>Fortis Games</h3>
+                            <p class="experience-meta"><span>2023–2026</span></p>
+                        </div>
+                        <ul class="experience-games">
+                            <li class="experience-game">
+                                <div class="experience-game-heading">
+                                    <h4>Unreleased Real-Time Multiplayer Game</h4>
+                                    <p class="experience-meta"><span>2023–2026</span></p>
+                                </div>
+                                <div class="experience-details">
+                                    <p class="experience-role">Primary UI Developer</p>
+                                    <p>Implemented and maintained UI systems, screens, and widgets, including communication between UI, gameplay, and backend systems.</p>
+                                    <p>Created tools for designers and artists to work with game data and build levels.</p>
+                                    <p class="experience-role">Gameplay Developer</p>
+                                    <p>Partnered closely with game designers on gameplay systems, creating nodes for a visual scripting system so they could build and iterate on gameplay.</p>
+                                    <p>Optimized code, implemented new gameplay systems, and helped designers set up and integrate AI into their workflows.</p>
+                                </div>
+                            </li>
+                            <li class="experience-game">
+                                <div class="experience-game-heading">
+                                    <h4>Unreleased Tower Defense</h4>
+                                    <p class="experience-meta"><span>2026</span></p>
+                                </div>
+                                <div class="experience-details">
+                                    <p class="experience-role">Primary Monetization Developer</p>
+                                    <p>Developed two major features to support both monetization and player retention:</p>
+                                    <p>Designed and maintained a Piggy Bank feature where players completed in-game tasks to earn rewards, which they could then purchase to unlock. This provided strong value while encouraging continued play as players worked toward their rewards.</p>
+                                    <p>Developed a Chain Offers feature that presented progressively more valuable offers, including free offers, unlocked after a player purchased an earlier, lower-cost offer. This enabled the team to provide attractive, and sometimes free, rewards following an initial purchase.</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </article>
+
+                    <article class="experience-item">
+                        <div class="experience-heading">
+                            <h3>Oktagon</h3>
+                            <p class="experience-meta"><span>2021–2023</span></p>
+                        </div>
+                        <ul class="experience-games">
+                            <li class="experience-game">
+                                <div class="experience-game-heading">
+                                    <h4><a href="https://www.youtube.com/watch?v=d2Sd3o_jpDY" target="_blank" rel="noopener">Rapala Fishing World Tour</a></h4>
+                                    <p class="experience-meta"><span>2022–2023</span></p>
+                                </div>
+                                <div class="experience-details">
+                                    <p class="experience-role">Prototype Gameplay Developer</p>
+                                    <p>Led gameplay development during prototyping, rapidly creating and iterating on game mechanics to explore and validate ideas.</p>
+                                    <p class="experience-role">Unity &amp; Backend Metagame Developer</p>
+                                    <p>Developed metagame features across Unity and backend systems during production.</p>
+                                    <p>Created a widely used event system that was later adopted by other Fortis projects.</p>
+                                    <p>Implemented a localization workflow combining Addressables for versioning with Google Sheets for rapid content iteration.</p>
+                                    <p>Built the backend for the metagame, including inventory management, equipment statistics, player data, and data migration.</p>
+                                </div>
+                            </li>
+                            <li class="experience-game">
+                                <div class="experience-game-heading">
+                                    <h4><a href="https://store.steampowered.com/app/1702320/PIGGY_Hunt/" target="_blank" rel="noopener">PIGGY: Hunt</a></h4>
+                                    <p class="experience-meta"><span>2022</span></p>
+                                </div>
+                                <div class="experience-details">
+                                    <p class="experience-role">Gameplay Developer</p>
+                                    <p>Developed backward reconciliation for cancellable actions predicted by the client. This allowed the game to correct predicted outcomes when an action was no longer valid—for example, when a player tried to get caught by a trap that had already caught another player.</p>
+                                </div>
+                            </li>
+                            <li class="experience-game">
+                                <div class="experience-game-heading">
+                                    <h4><a href="https://www.youtube.com/watch?v=4jPGKQSRzjc" target="_blank" rel="noopener">Age of Rivals: Conquest</a></h4>
+                                    <p class="experience-meta"><span>2021</span></p>
+                                </div>
+                                <div class="experience-details">
+                                    <p class="experience-role">Metagame Developer</p>
+                                    <p>Developed the friends system, including friend invitations delivered through push notifications, and updated matchmaking so friends could invite one another to play.</p>
+                                    <p>Created a card merge system that allowed players to combine multiple cards into a more powerful card.</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </article>
+                </div>
+            </section>
             <section class="container games-list-container" aria-labelledby="games-heading">
                 <div class="games-heading">
                     <h2 id="games-heading">Games</h2>
@@ -183,65 +268,20 @@
                     </div>
                 </article>
             </section>
-            <section class="experience-container" aria-labelledby="experience-heading">
-                <div class="experience-inner">
-                    <h2 id="experience-heading">Professional Experience</h2>
-
-                    <article class="experience-item">
-                        <div class="experience-heading">
-                            <h3>Unreleased Real-Time Multiplayer Game</h3>
-                            <p class="experience-meta"><span>Fortis Games</span><span>2023–2026</span></p>
-                        </div>
-                        <div class="experience-details">
-                            <p class="experience-role">Primary UI Developer</p>
-                            <p>Implemented and maintained UI systems, screens, and widgets, including communication between UI, gameplay, and backend systems.</p>
-                            <p>Created tools for designers and artists to work with game data and build levels.</p>
-                            <p class="experience-role">Gameplay Developer</p>
-                            <p>Partnered closely with game designers on gameplay systems, creating nodes for a visual scripting system so they could build and iterate on gameplay.</p>
-                            <p>Optimized code, implemented new gameplay systems, and helped designers set up and integrate AI into their workflows.</p>
-                        </div>
-                    </article>
-
-                    <article class="experience-item">
-                        <div class="experience-heading">
-                            <h3><a href="https://www.youtube.com/watch?v=d2Sd3o_jpDY" target="_blank" rel="noopener">Rapala Fishing World Tour</a></h3>
-                            <p class="experience-meta"><span>Oktagon</span><span>2022–2023</span></p>
-                        </div>
-                        <div class="experience-details">
-                            <p class="experience-role">Prototype Developer</p>
-                            <p>Rapidly developed and iterated on numerous gameplay ideas and mini-prototypes for client review, proposing and implementing systems in a one-day cycle. Used ScriptableObjects to enable reliable communication between entities and systems.</p>
-                            <p class="experience-role">UI &amp; Metagame Developer</p>
-                            <p>Built non-gameplay systems including items, inventory, and Battle Pass, and worked on communication between the frontend and backend.</p>
-                            <p class="experience-role">Backend Developer</p>
-                            <p>Built backend systems on Beamable for inventory, friends, profiles, progression, A/B testing, and analytics.</p>
-                        </div>
-                    </article>
-
-                    <article class="experience-item">
-                        <div class="experience-heading">
-                            <h3><a href="https://store.steampowered.com/app/1702320/PIGGY_Hunt/" target="_blank" rel="noopener">PIGGY: Hunt</a></h3>
-                            <p class="experience-meta"><span>Oktagon</span><span>2022</span></p>
-                        </div>
-                        <div class="experience-details">
-                            <p class="experience-role">Gameplay Developer</p>
-                            <p>Worked on gameplay systems, implemented entities and traps, and fixed bugs related to network desynchronization.</p>
-                        </div>
-                    </article>
-
-                    <article class="experience-item">
-                        <div class="experience-heading">
-                            <h3><a href="https://www.youtube.com/watch?v=4jPGKQSRzjc" target="_blank" rel="noopener">Age of Rivals: Conquest</a></h3>
-                            <p class="experience-meta"><span>Oktagon</span><span>2021</span></p>
-                        </div>
-                        <div class="experience-details">
-                            <p class="experience-role">Metagame Developer</p>
-                            <p>Created the friends system and implemented the feature that lets friends challenge one another.</p>
-                        </div>
-                    </article>
-                </div>
-            </section>
         </main>
         <footer class="site-footer"><p>Designed and built by Artur Nista</p><a href="#main-content">Back to top ↑</a></footer>
+        <dialog class="image-lightbox" aria-label="Game screenshot gallery">
+            <div class="lightbox-toolbar">
+                <p class="lightbox-count" aria-live="polite"></p>
+                <button class="lightbox-close" type="button" aria-label="Close gallery">Close <span aria-hidden="true">×</span></button>
+            </div>
+            <div class="lightbox-stage">
+                <button class="lightbox-nav lightbox-previous" type="button" aria-label="Previous image"><span aria-hidden="true">←</span></button>
+                <img class="lightbox-image" src="/img/lady/SS_20200703001848.png" alt="">
+                <button class="lightbox-nav lightbox-next" type="button" aria-label="Next image"><span aria-hidden="true">→</span></button>
+            </div>
+            <p class="lightbox-caption"></p>
+        </dialog>
         <script>
             (function () {
                 const storageKey = 'artur-portfolio-theme';
@@ -303,6 +343,138 @@
                     if (event.key === storageKey || event.key === null) {
                         applyTheme(getCurrentTheme());
                     }
+                });
+            }());
+        </script>
+        <script>
+            (function () {
+                const galleries = {
+                    'lady-of-colors': [
+                        ['SS_20200703001848.png', 'Knight exploring the underground kingdom in Lady of Colors'],
+                        ['SS_20200703001938.png', 'A platforming challenge in Lady of Colors'],
+                        ['SS_20200703002049.png', 'Colorful underground scenery'],
+                        ['SS_20200703002149.png', 'Lady of Colors screenshot'],
+                        ['SS_20200703002154.png', 'Lady of Colors screenshot'],
+                        ['SS_20200703002214.png', 'Lady of Colors screenshot'],
+                        ['SS_20200703002234.png', 'Lady of Colors screenshot'],
+                        ['SS_20200703002532.png', 'Lady of Colors screenshot'],
+                        ['SS_20200703002552.png', 'Lady of Colors screenshot'],
+                        ['SS_20200703002636.png', 'Lady of Colors screenshot'],
+                        ['SS_20200703002719.png', 'Lady of Colors screenshot']
+                    ],
+                    'treasure-hunter': [
+                        ['SS_20221031112446.png', 'Exploring the castle in Treasure Hunter'],
+                        ['SS_20221031112517.png', 'Treasure Hunter screenshot'],
+                        ['SS_20221031112654.png', 'Treasure Hunter screenshot'],
+                        ['SS_20221031112732.png', 'Using the hookshot in Treasure Hunter'],
+                        ['SS_20221031112802.png', 'Treasure Hunter screenshot'],
+                        ['SS_20221031112856.png', 'Another hidden area in Treasure Hunter'],
+                        ['itch_capa.png', 'Treasure Hunter cover image']
+                    ],
+                    'time-dungeon': [
+                        ['SS_20220221113750.png', 'Exploring a dungeon in Time Dungeon'],
+                        ['SS0_20220221114338.png', 'A dungeon room in Time Dungeon'],
+                        ['SS0_20220221114400.png', 'Time Dungeon screenshot'],
+                        ['SS_20221127131156.png', 'Time Dungeon screenshot'],
+                        ['SS_20221127191726.png', 'A late-game scene from Time Dungeon']
+                    ],
+                    'colorless-ruins': [
+                        ['SS_20200503124130.png', 'A room in the colorless ruins'],
+                        ['SS_20200503124135.png', 'Colorless Ruins screenshot'],
+                        ['SS_20200503124140.png', 'Colorless Ruins screenshot'],
+                        ['SS_20200503124155.png', 'Colorless Ruins screenshot'],
+                        ['SS_20200503124205.png', 'Colorless Ruins screenshot'],
+                        ['SS_20200503124220.png', 'A machine gun challenge in Colorless Ruins'],
+                        ['SS_20200503124250.png', 'Colorless Ruins screenshot'],
+                        ['SS_20200503124330.png', 'Colorless Ruins screenshot'],
+                        ['SS_20200503124420.png', 'Colorless Ruins screenshot'],
+                        ['SS_20200503124440.png', 'Colorless Ruins screenshot'],
+                        ['SS_20200503124445.png', 'Colorless Ruins screenshot'],
+                        ['SS_20200503124515.png', 'Colorless Ruins screenshot'],
+                        ['SS_20200503124530.png', 'A hidden area in Colorless Ruins']
+                    ]
+                };
+
+                const dialog = document.querySelector('.image-lightbox');
+                if (!dialog) return;
+
+                const image = dialog.querySelector('.lightbox-image');
+                const caption = dialog.querySelector('.lightbox-caption');
+                const count = dialog.querySelector('.lightbox-count');
+                const previous = dialog.querySelector('.lightbox-previous');
+                const next = dialog.querySelector('.lightbox-next');
+                let activeImages = [];
+                let activeIndex = 0;
+
+                function showImage(index) {
+                    activeIndex = index;
+                    const [src, alt] = activeImages[activeIndex];
+                    image.src = src;
+                    image.alt = alt;
+                    caption.textContent = alt;
+                    count.textContent = `${activeIndex + 1} / ${activeImages.length}`;
+                    previous.disabled = activeIndex === 0;
+                    next.disabled = activeIndex === activeImages.length - 1;
+                }
+
+                Object.entries(galleries).forEach(([gameId, entries]) => {
+                    const gallery = document.querySelector(`#${gameId} .game-gallery`);
+                    if (!gallery) return;
+
+                    const folders = {
+                        'lady-of-colors': 'lady',
+                        'treasure-hunter': 'treasure',
+                        'time-dungeon': 'timedungeon',
+                        'colorless-ruins': 'colorless'
+                    };
+                    const gameImages = entries.map(([filename, alt]) => [`/img/${folders[gameId]}/${filename}`, alt]);
+
+                    gallery.querySelectorAll('img').forEach((thumbnail) => {
+                        const button = document.createElement('button');
+                        button.type = 'button';
+                        button.className = 'gallery-thumb';
+                        button.setAttribute('aria-label', `Open image: ${thumbnail.alt}`);
+                        thumbnail.replaceWith(button);
+                        button.appendChild(thumbnail);
+
+                        button.addEventListener('click', () => {
+                            activeImages = gameImages;
+                            const imagePath = new URL(thumbnail.src, window.location.href).pathname;
+                            const matchingIndex = gameImages.findIndex(([src]) => src === imagePath);
+                            showImage(matchingIndex >= 0 ? matchingIndex : 0);
+                            if (typeof dialog.showModal === 'function') {
+                                dialog.showModal();
+                            } else {
+                                dialog.setAttribute('open', '');
+                                dialog.classList.add('lightbox-fallback-open');
+                            }
+                        });
+                    });
+                });
+
+                function closeDialog() {
+                    if (typeof dialog.close === 'function') {
+                        dialog.close();
+                    } else {
+                        dialog.removeAttribute('open');
+                        dialog.classList.remove('lightbox-fallback-open');
+                    }
+                }
+
+                dialog.querySelector('.lightbox-close').addEventListener('click', closeDialog);
+                previous.addEventListener('click', () => {
+                    if (activeIndex > 0) showImage(activeIndex - 1);
+                });
+                next.addEventListener('click', () => {
+                    if (activeIndex < activeImages.length - 1) showImage(activeIndex + 1);
+                });
+                dialog.addEventListener('click', (event) => {
+                    if (event.target === dialog) closeDialog();
+                });
+                dialog.addEventListener('keydown', (event) => {
+                    if (event.key === 'Escape') closeDialog();
+                    if (event.key === 'ArrowLeft' && activeIndex > 0) showImage(activeIndex - 1);
+                    if (event.key === 'ArrowRight' && activeIndex < activeImages.length - 1) showImage(activeIndex + 1);
                 });
             }());
         </script>
